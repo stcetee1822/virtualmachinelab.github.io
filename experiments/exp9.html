@@ -12,7 +12,7 @@
         <script src="/static/js/graph.ob.js"></script>
 </head>
 <body>
-      <div id="wrapper" style="position:absolute; top:30px;width:1310px;left:100px">
+      <div id="wrapper" style="position:absolute; top:30px; width:1310px; left:100px; background-color: blanchedalmond;">
         <div class="littledot" id="ld1"></br><a href="#" class="cmdLink detach" rel="ld1">1</a>
         </div>
         <div class="littledot" id="ld2"></br><a href="#" class="cmdLink detach" rel="ld2">2</a>
@@ -133,34 +133,33 @@
             <button id="check-button" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px" >Check</button>
           </div>
           <div style="position:absolute;left:75em;top:3em;">
-            <button id="reset" type="reset" onclick="window.location.reload();" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px" >Reset</button>
-            
+            <button id="addToTable1" disabled="true" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px" >Add to table 1</button>
+           
             </div>
             <div style="position:absolute;left:75em;top:5em;">
-              <button id="addToTable1" disabled="true" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px" >Add to table 1</button>
-                
+              <button id="addToTable2" disabled="true" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px" >Add to table 2</button>
+                        
               </div>
               <div style="position:absolute;left:75em;top:7em;">
-                <button id="addToTable2" disabled="true" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px" >Add to table 2</button>
-                  
+                <button id="graph1" onclick="drawgraph1();" disabled="true" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Graph 1
+                </button>
                 </div>
               <br><br>
                 <div style="position:absolute;left:75em;top:9em; ">
-                  <button id="graph1" onclick="drawgraph1();" disabled="true" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Graph 1
-                  </button>
+                  <button id="graph2" onclick="drawgraph2();" disabled="true" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Graph 2
+                  </button>  
                 </div>
                 <div style="position:absolute;left:75em;top:11em; ">
-                  <button id="graph2" onclick="drawgraph2();" disabled="true" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Graph 2
-                  </button>
-                </div>
-                <div style="position:absolute;left:75em;top:13em; ">
                   <button id="graph3" onclick="drawgraph3();" disabled="true" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Graph 3
                   </button>
                 </div>
-                
-                <div style="position:absolute;left:75em;top:15em;">
+                <div style="position:absolute;left:75em;top:13em; ">
                   <button id="print"  onclick="window.print();" style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Print
                   </button>
+                </div>
+                
+                <div style="position:absolute;left:75em;top:16.5em;">
+                  <button id="reset" type="reset" onclick="window.location.reload();" style="background-color:#f82d12; border:none; padding: 5px; border-radius:5px" >Reset</button>
                 </div>
         </div>
 
