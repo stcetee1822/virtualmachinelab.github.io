@@ -1,0 +1,137 @@
+         .wrapper {
+        width: 800px;
+        position: relative;
+        top: 100%;
+        left: 30%; 
+        display: inline-block; 
+      }
+
+    
+      .rang {
+        text-align: center;
+        color: white;
+
+      }
+
+      .rang-title {
+        display: inline-block;
+        width: 200px;
+      }
+   .rang-number {
+        width: 50%;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 10px;
+        font-weight: bold;
+        background-color: white;
+        color: black;
+      }
+
+
+      .meter {
+        display: block;
+        width: 283px;
+        height: 155px;
+        margin: 0px auto
+
+      }
+
+      .meter-shape {
+        -webkit-transform: skewX(-2deg) skewY(1deg);
+                transform: skewX(-2deg) skewY(1deg);
+        stroke-width: 18;
+        stroke-dashoffset: 253;
+        stroke: blue;
+        fill: none;
+      }
+
+      .meter-clock {
+        -webkit-transform: rotate(297deg);
+                transform: rotate(297deg);
+        -webkit-transform-origin: 137px 146px;
+                transform-origin: 137px 146px;
+        fill: red;
+      }
+
+      .meter-clock2 {
+        -webkit-transform: rotate(297deg);
+                transform: rotate(297deg);
+        -webkit-transform-origin: 137 px 146px;
+                transform-origin: 137px 146px;
+        fill: red;
+      }
+      .meter-clock3 {
+        -webkit-transform: rotate(297deg);
+                transform: rotate(297deg);
+        -webkit-transform-origin: 137 px 146px;
+                transform-origin: 137px 146px;
+        fill: red;
+      }
+
+
+      #range {
+        margin-bottom: 50px;
+        width: 112px;
+      }
+
+      .meter1 {
+        margin-top:130px;
+      }
+
+      .meter2 {
+       margin-top:130px;
+      }
+      .meter-clock2{
+      width: 20px;
+       margin-top:-500px;
+      }
+      .meter3 {
+
+       margin-top:130px;
+      }
+
+      .other {
+        text-align: center;
+         margin-top: 0px;
+      }
+
+    .container{
+    width: 20%; 
+  }
+
+  .box{
+    
+    background: none;
+    margin: 0px 10px;
+    transition: 1s;
+
+  }
+  .box:hover{
+    transform: scale(1.2);
+    background: none;
+    z-index: 2;
+    box-shadow: 2px 2px 2px #000;
+    
+  }
+  #table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table td, #customers th {
+ 
+  padding: 0;
+}
+
+
+
+#table tr:hover {background-color: #27D447;}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: linen;
+  color: black;
+}
