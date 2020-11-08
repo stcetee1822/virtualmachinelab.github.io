@@ -524,7 +524,7 @@ jsPlumb.ready(function () {
             anchor: [0.5, 0.5, 0, -1],
             connectorStyle: { strokeWidth: 4, stroke: "rgba(0,0,255)" },
             endpointsOnTop: true,
-            isSource: true,
+            isSource: false,
             maxConnections: 10,
             isTarget: true,
             dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
@@ -533,7 +533,7 @@ jsPlumb.ready(function () {
             anchor: [0.5, 0.5, 0, -1],
             connectorStyle: { strokeWidth: 4, stroke: "rgba(255,0,0)" },
             endpointsOnTop: true,
-            isSource: true,
+            isSource: false,
             maxConnections: 10,
             isTarget: true,
             dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
@@ -542,7 +542,7 @@ jsPlumb.ready(function () {
             anchor: [0.5, 0.5, 0, -1],
             connectorStyle: { strokeWidth: 4, stroke: "rgba(0,255,0)" },
             endpointsOnTop: true,
-            isSource: true,
+            isSource: false,
             maxConnections: 10,
             isTarget: true,
             dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
@@ -949,7 +949,6 @@ jsPlumb.ready(function () {
             alert("Alert ! Correct connection proceed to take reading.");
             document.getElementById("check-button").disabled=true;
             rightconnection=true;
-            disable_all();
             return;
         } 
         else 
