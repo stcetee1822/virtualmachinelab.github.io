@@ -696,6 +696,7 @@ function rotaronoff()
     var rangeShow4 = document.querySelector("#show4");
     var rangeShow5 = document.querySelector("#show5");
     var rangeShow6 = document.querySelector("#show6");
+    var rangeShow7 = document.querySelector("#show7");
 
     var rangeClock =  document.querySelector('.meter-clock');
     var rangeClock2 =  document.querySelector('.meter-clock2');
@@ -735,6 +736,7 @@ function rotaronoff()
           rangeShow4.value=1250;
           rangeShow5.value=4.3;
           rangeShow6.value=27;
+          rangeShow7.value=9;
           document.getElementById('cirmover2').style.animation="rotation 2.1s infinite linear";
           if(rangeMeter.value <= 8) {
             rangeShow.value = 200;
@@ -743,6 +745,7 @@ function rotaronoff()
             rangeShow4.value=1330;
             rangeShow5.value=3.7;
           rangeShow6.value=21;
+          rangeShow7.value=8;
             document.getElementById('cirmover2').style.animation="rotation 1.9s infinite linear";
             if (rangeMeter.value <= 7) {
               rangeShow.value = 200;
@@ -751,6 +754,7 @@ function rotaronoff()
               rangeShow4.value=1380;
               rangeShow5.value=3.1;
           rangeShow6.value=16;
+          rangeShow7.value=7;
               document.getElementById('cirmover2').style.animation="rotation 1.7s infinite linear";
               if (rangeMeter.value <= 6) {
                 rangeShow.value = 200;
@@ -759,6 +763,7 @@ function rotaronoff()
                 rangeShow4.value=1415;
                 rangeShow5.value=2.5;
                 rangeShow6.value=12;
+                rangeShow7.value=6;
                 document.getElementById('cirmover2').style.animation="rotation 1.5s infinite linear";
                 if (rangeMeter.value <= 5) {
                   rangeShow.value = 200;
@@ -767,6 +772,7 @@ function rotaronoff()
                   rangeShow4.value=1440;
                   rangeShow5.value=2;
                   rangeShow6.value=8;
+                  rangeShow7.value=5;
                   document.getElementById('cirmover2').style.animation="rotation 1.3s infinite linear";
                   if (rangeMeter.value <= 4) {
                     rangeShow.value = 200;
@@ -775,6 +781,7 @@ function rotaronoff()
                     rangeShow4.value=1465;
                     rangeShow5.value=1.5;
                     rangeShow6.value=5;
+                    rangeShow7.value=4;
                     document.getElementById('cirmover2').style.animation="rotation 1.1s infinite linear";
                     if (rangeMeter.value <= 3) {
                       rangeShow.value = 200;
@@ -783,6 +790,7 @@ function rotaronoff()
                       rangeShow4.value=1475;
                       rangeShow5.value=1;
                       rangeShow6.value=3;
+                      rangeShow7.value=3;
                       document.getElementById('cirmover2').style.animation="rotation 0.9s infinite linear";;
                       if (rangeMeter.value <= 2) {
                         rangeShow.value = 200;
@@ -791,6 +799,7 @@ function rotaronoff()
                         rangeShow4.value=1480;
                         rangeShow5.value=0.5;
                         rangeShow6.value=2;
+                        rangeShow7.value=2;
                         document.getElementById('cirmover2').style.animation="rotation 0.7s infinite linear";
                         if (rangeMeter.value <= 1) {
                           rangeShow.value = 200;
@@ -799,6 +808,7 @@ function rotaronoff()
                           rangeShow4.value=1490;
                           rangeShow5.value=0.0;
                           rangeShow6.value=0.0;
+                          rangeShow7.value=1;
                           document.getElementById('cirmover2').style.animation="rotation 0.5s infinite linear";
                           if (rangeMeter.value <= 0) {
                             document.getElementById('cirmover2').style.animation="rotation 0s infinite linear";
@@ -808,6 +818,7 @@ function rotaronoff()
                             rangeShow4.value=0;
                             rangeShow5.value=0;
                             rangeShow6.value=0;
+                            rangeShow7.value=0;
                           }
                         }
                       }
