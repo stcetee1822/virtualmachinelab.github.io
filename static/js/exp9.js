@@ -582,40 +582,13 @@ function mcbonoff()
     {
         if (mcboffstate==true)
         {
-            
-            mcboffstate=false;
+            mcboffstate = false;
             document.getElementById('myimage').src='/static/images/mcbon.png';
             document.getElementById('myimage1').src='/static/images/push2.png';
             document.getElementById('myimage2').src='/static/images/push2.png';
             document.getElementById('myimage3').src='/static/images/push2.png';            
         }
-        else
-        {
-            if(rotoroffstate==false)
-            {
-                rotaronoff();
-                rangeShow.value = 0;
-                rangeClock.style.transform = 'rotate(' + 295+ 'deg)';
-                
-                document.getElementById('myimage').src='/static/images/mcboff.png';
-                document.getElementById('myimage1').src='/static/images/push1.png';
-                document.getElementById('myimage2').src='/static/images/push1.png';
-                document.getElementById('myimage3').src='/static/images/push1.png';
-                mcboffstate=true;
-            }
-            else
-            {
-
-                mcboffstate=true;
-                rangeShow.value = 0;
-                rangeClock.style.transform = 'rotate(' + 295+ 'deg)';
-                document.getElementById('myimage').src='/static/images/mcboff.png';
-                document.getElementById('myimage1').src='/static/images/push1.png'; 
-                document.getElementById('myimage2').src='/static/images/push1.png';
-                document.getElementById('myimage3').src='/static/images/push1.png';
-            }
-            
-        }
+        
     }   
 }
 

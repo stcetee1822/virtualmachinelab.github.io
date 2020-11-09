@@ -314,3 +314,19 @@ path, .jtk-endpoint {
     padding-top: 0em;
     padding-bottom: 0em;
   }
+
+  @media print {
+    .noPrint { display: none; }
+} 
+   @page 
+    {
+        size: auto A4;   /* auto is the initial value */
+        margin: 0mm;  /* this affects the margin in the printer settings */
+    }
+
+    body 
+    {
+        background-color:#FFFFFF; 
+        border: solid 1px black ;
+        margin: 0px;  /* this affects the margin on the content before sending to printer */
+   }
