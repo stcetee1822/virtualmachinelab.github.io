@@ -1,3 +1,3 @@
 site moved to https://virtualmachinelab.herokuapp.com
 
-new github repository pulak777/virtualmachinelab
+new github repository https://github.com/pulak777/virtualmachinelab
