@@ -697,6 +697,7 @@ function rotaronoff()
     var rangeShow2 = document.querySelector("#show2");
     var rangeShow3 = document.querySelector("#show3");
     var rangeShow4 = document.querySelector("#show4");
+    var rangeShow5 = document.querySelector("#show5");
 
     var rangeClock =  document.querySelector('.meter-clock');
     var rangeClock2 =  document.querySelector('.meter-clock2');
@@ -726,54 +727,56 @@ function rotaronoff()
             rangeShow2.value = 2.3;
             rangeShow3.value = 1498;
             rangeShow4.value=rangeMeter.value;
+            rangeShow5.value= "400 V";
             document.getElementById('cirmover2').style.animation="rotation 0.5s infinite linear";
             if (rangeMeter.value <= 7) {
               rangeShow.value = 350;
               rangeShow2.value = 1.8;
               rangeShow3.value = 1497;
               rangeShow4.value=rangeMeter.value;
-              
+              rangeShow5.value= "350 V";
               document.getElementById('cirmover2').style.animation="rotation 1s infinite linear";
               if (rangeMeter.value <= 6) {
                 rangeShow.value = 300;
                 rangeShow2.value = 1.5;
                 rangeShow3.value = 1496;
                 rangeShow4.value=rangeMeter.value;
-            
+                rangeShow5.value= "300 V";
                 document.getElementById('cirmover2').style.animation="rotation 1.4s infinite linear";
                 if (rangeMeter.value <= 5) {
                   rangeShow.value = 250;
                   rangeShow2.value = 1.2;
                   rangeShow3.value = 1495;
                   rangeShow4.value=rangeMeter.value;
-                 
+                  rangeShow5.value= "250 V";
                   document.getElementById('cirmover2').style.animation="rotation 1.7s infinite linear";
                   if (rangeMeter.value <= 4) {
                     rangeShow.value = 200;
                     rangeShow2.value = 1;
                     rangeShow3.value = 1494;
                     rangeShow4.value=rangeMeter.value;
-                    
+                    rangeShow5.value= "200 V";
                     document.getElementById('cirmover2').style.animation="rotation 2s infinite linear";
                     if (rangeMeter.value <= 3) {
                       rangeShow.value = 150;
                       rangeShow2.value = 0.8;
                       rangeShow3.value = 1490;
                       rangeShow4.value=rangeMeter.value;
-                     
+                      rangeShow5.value= "150 V";
                       document.getElementById('cirmover2').style.animation="rotation 2.4s infinite linear";;
                       if (rangeMeter.value <= 2) {
                         rangeShow.value = 100;
                         rangeShow2.value = 0.6;
                         rangeShow3.value = 1480;
                         rangeShow4.value=rangeMeter.value;
-                        
+                        rangeShow5.value= "100 V";
                         document.getElementById('cirmover2').style.animation="rotation 2.7s infinite linear";
                         if (rangeMeter.value <= 1) {
                           rangeShow.value = 50;
                           rangeShow2.value = 2.8;
                           rangeShow3.value = 0;
                           rangeShow4.value=rangeMeter.value;
+                          rangeShow5.value= "50 V";
                           document.getElementById('cirmover2').style.animation="rotation 3s infinite linear";
                           if (rangeMeter.value <= 0) {
                             document.getElementById('cirmover2').style.animation="rotation 0s infinite linear";
@@ -781,6 +784,7 @@ function rotaronoff()
                             rangeShow2.value = 0;
                             rangeShow3.value = 0;
                             rangeShow4.value=rangeMeter.value;
+                            rangeShow5.value= "0 V";
                            
                           }
                         }

@@ -27,6 +27,12 @@
         height: 50px;
         width: 50px;
       }
+      .rang-title4 {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        
+      }
 
    .rang-number {
         width: 50%;
@@ -47,7 +53,7 @@
         font-weight: bold;
         background-color: white;
         color: black;
-        border-radius: 40px;
+        border-radius: 10px;
       }
       .rang-number3 {
         width: 50%;
@@ -58,6 +64,17 @@
         font-weight: bold;
         background-color: rgb(160, 145, 145);
         color: rgb(248, 246, 246);
+      }
+      .rang-number4 {
+        width: 50%;
+        height: 35%;
+        margin-top: 15px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: rgb(46, 43, 43);
+        color: rgb(255, 255, 255);
+        border-radius: 40px;
       }
 
 
