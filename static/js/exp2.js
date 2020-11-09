@@ -507,9 +507,9 @@ jsPlumb.ready(function () {
                 }));
             }
         });
-        
-        //short cut for debugging is_connected_2_5 && is_connected_3_6 && is_connected_7_10 && is_connected_8_11 && is_connected_9_16 && is_connected_11_15 && is_connected_10_12 && is_connected_13_14
-        if ( is_connected_1_4 && !unallowed_connection_present) 
+        //is_connected_2_5 && is_connected_3_6 && is_connected_7_10 && is_connected_8_11 && is_connected_9_16 && is_connected_11_15 && is_connected_10_12 && is_connected_13_14 &&
+        //short cut can be used for debugging
+        if ( is_connected_13_14 && !unallowed_connection_present) 
         {
             alert("Alert ! Correct connection proceed to take reading.");
             document.getElementById("check-button").disabled=true;
@@ -624,7 +624,7 @@ jsPlumb.ready(function () {
 
 
 
-
+var isrotating=false;
 var rotoroffstate=true;
 var mcboffstate=true;
 var were=270;
@@ -641,51 +641,24 @@ function mcbonoff()
             document.getElementById('myimage2').src='/static/images/push2.png';
             document.getElementById('myimage3').src='/static/images/push2.png';            
         }
-        else
-        {
-            if(rotoroffstate==false)
-            {
-                rotaronoff();
-                rangeShow.value = 0;
-                rangeClock.style.transform = 'rotate(' + 295+ 'deg)';
-                
-                document.getElementById('myimage').src='/static/images/mcboff.png';
-                document.getElementById('myimage1').src='/static/images/push1.png';
-                document.getElementById('myimage2').src='/static/images/push1.png';
-                document.getElementById('myimage3').src='/static/images/push1.png';
-                mcboffstate=true;
-            }
-            else
-            {
-
-                mcboffstate=true;
-                rangeShow.value = 0;
-                rangeClock.style.transform = 'rotate(' + 295+ 'deg)';
-                document.getElementById('myimage').src='/static/images/mcboff.png';
-                document.getElementById('myimage1').src='/static/images/push1.png'; 
-                document.getElementById('myimage2').src='/static/images/push1.png';
-                document.getElementById('myimage3').src='/static/images/push1.png';
-            }
-            
+        else{
+            return;
         }
     }   
+    else{
+        alert("Alert ! Please complete the circuit or remove wrong connections");
+    }
 }
 
 
-var isrotating=false;
+
 function rotaronoff()
 {   
     
-    if(mcboffstate==true)
-    {
-        alert("Alert ! Please complete the connection first");
-    }
-    else
+    if(mcboffstate==false)
     {
         if(isrotating==false)
         {
-            if (rotoroffstate==true)
-            {
             isrotating=true;
             rotoroffstate=false;
             document.getElementById('cirmover2').style.animation="rotation 3s infinite linear";
@@ -704,34 +677,15 @@ function rotaronoff()
             },15);
             rangeMeter.value=1;
             rangeChange();
-            }
-            else
-            {   
-                isrotating=true;
-                rotoroffstate=true;
-                document.getElementById('cirmover2').style.animation="rotation 3s infinite linear";
-                document.getElementById("graph").disabled=true;
-                document.getElementById("addToTable").disabled=true;
-                document.getElementById("range").disabled=true;
-                var intervalId=setInterval(function()
-                    {
-                        if(were===270)
-                        {
-                            clearInterval(intervalId);
-                            were=270;
-                            isrotating=false;
-                        }
-                        were--;
-                    },15);
-                rangeMeter.value=0;  
-                rangeChange();
-            }
         }
         else
         {
             return;
         } 
     }  
+    else{
+        return;
+    }
 }
 
     var xx = [];

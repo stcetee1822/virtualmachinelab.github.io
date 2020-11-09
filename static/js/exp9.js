@@ -461,7 +461,7 @@ jsPlumb.ready(function () {
         });
         //removed for faster debugging
         //is_connected_2_4 && is_connected_3_12 && is_connected_4_5 && is_connected_6_7 && is_connected_7_8 && is_connected_9_11 && is_connected_10_12 &&
-        if ( is_connected_1_3 && !unallowed_connection_present) 
+        if ( is_connected_10_12 && !unallowed_connection_present) 
         {
             alert("Alert ! Correct connection proceed to take reading.");
             document.getElementById("check-button").disabled=true;
@@ -572,7 +572,7 @@ jsPlumb.ready(function () {
 
 
 
-
+var isrotating=false;
 var rotoroffstate=true;
 var mcboffstate=true;
 var were=270;
@@ -593,7 +593,7 @@ function mcbonoff()
 }
 
 
-var isrotating=false;
+
 function rotaronoff()
 {   
     
@@ -605,8 +605,6 @@ function rotaronoff()
     {
         if(isrotating==false)
         {
-            if (rotoroffstate==true)
-            {
             isrotating=true;
             rotoroffstate=false;
             document.getElementById('cirmover2').style.animation="rotation 0s infinite linear";
@@ -628,28 +626,6 @@ function rotaronoff()
             },15);
             rangeMeter.value=1;
             rangeChange();
-            }
-            else
-            {   
-                isrotating=true;
-                rotoroffstate=true;
-                document.getElementById('cirmover2').style.animation="rotation 0s infinite linear";
-                document.getElementById("graph").disabled=true;
-                document.getElementById("addToTable").disabled=true;
-                document.getElementById("range").disabled=true;
-                var intervalId=setInterval(function()
-                    {
-                        if(were===270)
-                        {
-                            clearInterval(intervalId);
-                            were=270;
-                            isrotating=false;
-                        }
-                        were--;
-                    },15);
-                rangeMeter.value=0;  
-                rangeChange();
-            }
         }
         else
         {

@@ -192,3 +192,20 @@
   background-color: linen;
   color: black;
 }
+
+
+@media print {
+  .noPrint { display: none; }
+} 
+ @page 
+  {
+      size: auto A4;   
+      margin: 1mm;  
+  }
+
+  body 
+  {
+      background-color:#FFFFFF; 
+      border: solid 1px black ;
+      margin: 0px;  
+  }
