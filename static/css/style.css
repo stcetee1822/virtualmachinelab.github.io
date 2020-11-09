@@ -151,6 +151,16 @@
   border-collapse: collapse;
   width: 100%;
 }
+#table1 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#table2 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
 #table td, #customers th {
  
@@ -162,6 +172,20 @@
 #table tr:hover {background-color: #27D447;}
 
 #table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: linen;
+  color: black;
+}
+#table1 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: linen;
+  color: black;
+}
+#table2 th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;

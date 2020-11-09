@@ -459,9 +459,9 @@ jsPlumb.ready(function () {
                 }));
             }
         });
-        
-
-        if ( is_connected_1_3 && is_connected_2_4 && is_connected_3_12 && is_connected_4_5 && is_connected_6_7 && is_connected_7_8 && is_connected_9_11 && is_connected_10_12 && !unallowed_connection_present) 
+        //removed for faster debugging
+        //is_connected_2_4 && is_connected_3_12 && is_connected_4_5 && is_connected_6_7 && is_connected_7_8 && is_connected_9_11 && is_connected_10_12 &&
+        if ( is_connected_1_3 && !unallowed_connection_present) 
         {
             alert("Alert ! Correct connection proceed to take reading.");
             document.getElementById("check-button").disabled=true;
@@ -636,7 +636,7 @@ function rotaronoff()
             {
             isrotating=true;
             rotoroffstate=false;
-            document.getElementById('cirmover2').style.animation="rotation 1s infinite linear";
+            document.getElementById('cirmover2').style.animation="rotation 0s infinite linear";
             document.getElementById("graph1").disabled=false;
             document.getElementById("graph2").disabled=false;
             document.getElementById("graph3").disabled=false;
@@ -717,9 +717,15 @@ function rotaronoff()
       function rangeChange() {
         var rotateClock =  rangeMeter.value;
         
-        rangeClock.style.transform = 'rotate(' + 20+ 'deg)';
-        rangeClock2.style.transform = 'rotate(' + (-62 + ((rotateClock * 1000) / 102)) + 'deg)';
-         rangeClock3.style.transform = 'rotate(' + (-62 + ((rotateClock * 1150) / 100)) + 'deg)';
+        rangeClock.style.transform = 'rotate(' + -30+ 'deg)';
+        if(rotateClock == 1){
+            rangeClock2.style.transform = 'rotate(' + (-62 + ((rotateClock * 1000) / 50)) + 'deg)';
+        }
+        else{
+            rangeClock2.style.transform = 'rotate(' + (-42 + ((rotateClock * 1000) / 200)) + 'deg)';
+        }
+        
+        rangeClock3.style.transform = 'rotate(' + (-62 + ((rotateClock * 1150) / 90)) + 'deg)';
         
         // rangeShow.value = rotateClock;
         if (rangeMeter.value <= 9) {
@@ -729,7 +735,7 @@ function rotaronoff()
           rangeShow4.value=1250;
           rangeShow5.value=4.3;
           rangeShow6.value=27;
-          document.getElementById('cirmover2').style.animation="rotation 3s infinite linear";
+          document.getElementById('cirmover2').style.animation="rotation 2.1s infinite linear";
           if(rangeMeter.value <= 8) {
             rangeShow.value = 200;
             rangeShow2.value = 9.5;
@@ -737,7 +743,7 @@ function rotaronoff()
             rangeShow4.value=1330;
             rangeShow5.value=3.7;
           rangeShow6.value=21;
-            document.getElementById('cirmover2').style.animation="rotation 2.6s infinite linear";
+            document.getElementById('cirmover2').style.animation="rotation 1.9s infinite linear";
             if (rangeMeter.value <= 7) {
               rangeShow.value = 200;
               rangeShow2.value = 8.4;
@@ -745,7 +751,7 @@ function rotaronoff()
               rangeShow4.value=1380;
               rangeShow5.value=3.1;
           rangeShow6.value=16;
-              document.getElementById('cirmover2').style.animation="rotation 2.3s infinite linear";
+              document.getElementById('cirmover2').style.animation="rotation 1.7s infinite linear";
               if (rangeMeter.value <= 6) {
                 rangeShow.value = 200;
                 rangeShow2.value = 7.3;
@@ -753,7 +759,7 @@ function rotaronoff()
                 rangeShow4.value=1415;
                 rangeShow5.value=2.5;
                 rangeShow6.value=12;
-                document.getElementById('cirmover2').style.animation="rotation 2s infinite linear";
+                document.getElementById('cirmover2').style.animation="rotation 1.5s infinite linear";
                 if (rangeMeter.value <= 5) {
                   rangeShow.value = 200;
                   rangeShow2.value = 5.8;
@@ -761,7 +767,7 @@ function rotaronoff()
                   rangeShow4.value=1440;
                   rangeShow5.value=2;
                   rangeShow6.value=8;
-                  document.getElementById('cirmover2').style.animation="rotation 1.7s infinite linear";
+                  document.getElementById('cirmover2').style.animation="rotation 1.3s infinite linear";
                   if (rangeMeter.value <= 4) {
                     rangeShow.value = 200;
                     rangeShow2.value = 4.8;
@@ -769,7 +775,7 @@ function rotaronoff()
                     rangeShow4.value=1465;
                     rangeShow5.value=1.5;
                     rangeShow6.value=5;
-                    document.getElementById('cirmover2').style.animation="rotation 1.4s infinite linear";
+                    document.getElementById('cirmover2').style.animation="rotation 1.1s infinite linear";
                     if (rangeMeter.value <= 3) {
                       rangeShow.value = 200;
                       rangeShow2.value = 4.5;
@@ -777,7 +783,7 @@ function rotaronoff()
                       rangeShow4.value=1475;
                       rangeShow5.value=1;
                       rangeShow6.value=3;
-                      document.getElementById('cirmover2').style.animation="rotation 1.1s infinite linear";;
+                      document.getElementById('cirmover2').style.animation="rotation 0.9s infinite linear";;
                       if (rangeMeter.value <= 2) {
                         rangeShow.value = 200;
                         rangeShow2.value = 4.2;
@@ -785,7 +791,7 @@ function rotaronoff()
                         rangeShow4.value=1480;
                         rangeShow5.value=0.5;
                         rangeShow6.value=2;
-                        document.getElementById('cirmover2').style.animation="rotation 0.8s infinite linear";
+                        document.getElementById('cirmover2').style.animation="rotation 0.7s infinite linear";
                         if (rangeMeter.value <= 1) {
                           rangeShow.value = 200;
                           rangeShow2.value = 4.1;
